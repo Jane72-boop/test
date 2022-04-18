@@ -1,0 +1,47 @@
+html {
+  font-size: 62.5%;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$soft-red: #fe7867;
+$yellow: #fad400;
+
+$dark-saturated-cyan: #25564b;
+$dark-blue: #19536b;
+$dark-moderate-cyan: #458c7e;
+
+$very-dark-saturated-blue: #23303e;
+$very-dark-grayish-blue: #5a636c;
+$dark-grayish-blue: #818498;
+$grayish-blue: #a7abae;
+$white: #fff;
+
+@mixin transition {
+  transition: all 0.2s ease-in-out;
+}
+
+@mixin hover-underline {
+  content: "";
+  height: 8px;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  transition: 0.5s ease-in-out;
+  position: absolute;
+  bottom: 2px;
+  z-index: -5;
+  border-radius: 8em;
+}
+
+@mixin background-image-config {
+  padding: 1.5em;
+  width: 100%;
+  overflow: hidden;
+}

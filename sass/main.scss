@@ -1,0 +1,365 @@
+@import "config";
+
+body {
+  overflow-x: hidden;
+  max-height: 0;
+}
+
+.removescroll {
+  overflow: hidden;
+}
+
+header {
+  background: url(../images/icon-arrow-down.svg) 50% 80% no-repeat,
+    url(../images/mobile/image-header.jpg) 50% 70% no-repeat;
+  background-size: 5em, cover;
+  min-height: 50em;
+  @include background-image-config;
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #3dbeff;
+    padding: 1.5em;
+    z-index: 999;
+
+    .logo {
+      display: flex;
+      align-self: center;
+      justify-self: center;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: space-around;
+      width: Min(60em, 60%);
+      list-style: none;
+
+      a {
+        color: #dbdbdb;
+        text-decoration: none;
+        letter-spacing: 3px;
+        font-weight: bold;
+        font-size: 1.8rem;
+        font-family: "Barlow", sans-serif;
+      }
+    }
+
+    .burger {
+      cursor: pointer;
+      z-index: 10;
+
+      div {
+        width: 25px;
+        height: 2px;
+        background-color: $white;
+        margin: 5px;
+        transition: all 0.3s ease;
+      }
+    }
+
+    .nav-links {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100vh;
+      background-color: $very-dark-saturated-blue;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+      font-family: "Barlow", serif;
+
+      li {
+        opacity: 0;
+      }
+
+      a {
+        @include transition;
+      }
+
+      a:hover {
+        font-family: "Fraunces", serif;
+        color: $very-dark-saturated-blue;
+        background-color: $yellow;
+        padding: 1em 2em;
+        border-radius: 50px;
+      }
+    }
+
+    nav {
+      .burger {
+        display: block;
+      }
+    }
+
+    .nav-active {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .toggle .line-1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .toggle .line-2 {
+    opacity: 0;
+  }
+
+  .toggle .line-3 {
+    transform: rotate(45deg) translate(-3px, -6px);
+  }
+
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 6em;
+    h1 {
+      font-family: "Fraunces", serif;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-size: 5.2rem;
+      color: $white;
+    }
+  }
+}
+
+section {
+  text-align: center;
+  .section-image {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .section-info {
+    padding: 3em;
+    h2 {
+      font-family: "Fraunces", serif;
+      font-size: 4.2rem;
+      color: $very-dark-saturated-blue;
+    }
+    p {
+      margin: 1.5em 0;
+      font-family: "Barlow", sans-serif;
+      font-size: 1.8rem;
+      color: $very-dark-grayish-blue;
+    }
+    h3 {
+      font-family: "Fraunces", serif;
+      font-size: 2rem;
+      position: relative;
+      display: flex;
+      justify-content: center;
+
+      a {
+        text-decoration: none;
+        color: $very-dark-saturated-blue;
+        display: flex;
+        justify-content: center;
+      }
+
+      a::after {
+        background-color: lighten($soft-red, 20);
+        content: "";
+        height: 8px;
+        width: 6em;
+        display: flex;
+        justify-content: center;
+        transition: 0.5s ease-in-out;
+        position: absolute;
+        bottom: 2px;
+        z-index: -5;
+        border-radius: 8em;
+      }
+
+      a:hover::after {
+        background-color: $soft-red;
+        @include hover-underline;
+      }
+    }
+  }
+}
+
+.first-service {
+  background: url(../images/mobile/image-graphic-design.jpg) no-repeat;
+
+  h2,
+  p {
+    color: $dark-saturated-cyan;
+  }
+}
+
+.second-service {
+  background: url(../images/mobile/image-photography.jpg) no-repeat;
+
+  h2,
+  p {
+    color: $dark-blue;
+  }
+}
+
+.service {
+  background-position: 50% 60%;
+  background-size: cover;
+  min-height: 60em;
+  @include background-image-config;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  .service-info {
+    position: absolute;
+    bottom: 8em;
+
+    h2 {
+      font-family: "Fraunces", serif;
+      font-size: 3.8rem;
+    }
+
+    p {
+      font-family: "Barlow", sans-serif;
+      margin-top: 2em;
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5em;
+
+  h2 {
+    font-family: "Fraunces", serif;
+    font-size: 2rem;
+    letter-spacing: 5px;
+    color: $dark-grayish-blue;
+    margin: 2em auto;
+  }
+
+  .client-testimonial {
+    img {
+      border-radius: 50%;
+      width: Min(18%, 8em);
+    }
+
+    p {
+      font-family: "Barlow", sans-serif;
+      font-size: 1.6rem;
+      margin: 1.5em auto;
+      color: $very-dark-grayish-blue;
+    }
+
+    h2 {
+      font-size: 2rem;
+      letter-spacing: 0;
+      color: $very-dark-saturated-blue;
+      margin: 0;
+    }
+
+    h3 {
+      font-family: "Barlow", sans-serif;
+      font-size: 1.2rem;
+      margin: 0.5em auto 4em auto;
+      color: $dark-grayish-blue;
+    }
+  }
+}
+
+.image-collage {
+  display: grid;
+  gap: 0;
+  grid-template-columns: repeat(2, minmax(150px, 50em));
+  justify-content: center;
+  align-content: center;
+
+  img {
+    width: Min(100%);
+  }
+}
+
+footer {
+  background-color: lighten($dark-moderate-cyan, 20);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  .logo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6em 0;
+    img {
+      width: 20em;
+      filter: invert(60%) sepia(31%) saturate(651%) hue-rotate(116deg)
+        brightness(94%) contrast(93%);
+    }
+  }
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 6em;
+
+    a {
+      text-decoration: none;
+      color: $dark-moderate-cyan;
+      font-family: "Barlow", sans-serif;
+      font-size: 1.8rem;
+
+      &:hover {
+        color: $white;
+        @include transition;
+      }
+    }
+  }
+
+  .socmed-links {
+    margin: 8em 0;
+    display: flex;
+    flex-direction: row;
+    gap: 4em;
+
+    img:hover {
+      cursor: pointer;
+      filter: brightness(0) invert(1);
+      @include transition;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  nav {
+    .burger {
+      display: none;
+    }
+  }
+}

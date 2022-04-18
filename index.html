@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <title>Frontend Mentor | Sunnyside agency landing page</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="images/logo.svg" alt="logo" />
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+
+        <div class="burger">
+          <div class="line-1"></div>
+          <div class="line-2"></div>
+          <div class="line-3"></div>
+        </div>
+      </nav>
+
+      <div class="hero">
+        <h1>We are creatives</h1>
+      </div>
+    </header>
+
+    <section class="entice-section">
+      <div class="section-image">
+        <img
+          class="mobile-image"
+          src="images/mobile/image-transform.jpg"
+          srcset="
+            images/mobile/image-transform.jpg   720w,
+            images/desktop/image-transform.jpg 1024w
+          "
+          sizes="(max-width: 1024px) 720w, 1024w"
+          alt="image of an egg"
+        />
+      </div>
+      <div class="section-info">
+        <h2>Transform your brand</h2>
+        <p>
+          We are a full-service creative agency specializing in helping brands
+          grow fast. Engage your clients through compelling visuals that do most
+          of the marketing for you.
+        </p>
+        <h3><a href="#">Learn More</a></h3>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-image">
+        <img
+          class="mobile-image"
+          src="images/mobile/image-stand-out.jpg"
+          srcset="
+            images/mobile/image-stand-out.jpg   720w,
+            images/desktop/image-stand-out.jpg 1024w
+          "
+          sizes="(max-width: 1024px) 720w, 1024w"
+          alt="image of a glass"
+        />
+      </div>
+      <div class="section-info">
+        <h2>Stand out to the right audience</h2>
+        <p>
+          Using a collaborative formula of designers, researchers,
+          photographers, videographers, and copywriters, we’ll build and extend
+          your brand in digital places.
+        </p>
+        <h3><a href="#">Learn More</a></h3>
+      </div>
+    </section>
+
+    <section class="first-service service">
+      <div class="service-info">
+        <h2>Graphic design</h2>
+        <p>
+          Great design makes you memorable. We deliver artwork that underscores
+          your brand message and captures potential clients’ attention.
+        </p>
+      </div>
+    </section>
+
+    <section class="second-service service">
+      <div class="service-info">
+        <h2>Photography</h2>
+        <p>
+          Increase your credibility by getting the most stunning, high-quality
+          photos that improve your business image.
+        </p>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <h2>Client Testimonials</h2>
+
+      <div class="client-testimonial">
+        <img src="images/image-emily.jpg" alt="image of a person" />
+        <p>
+          We put our trust in Sunnyside and they delivered, making sure our
+          needs were met and deadlines were always hit.
+        </p>
+        <h2>Emily R.</h2>
+        <h3>Marketing Direction</h3>
+      </div>
+
+      <div class="client-testimonial">
+        <img src="images/image-thomas.jpg" alt="image of a person" />
+        <p>
+          Sunnyside’s enthusiasm coupled with their keen interest in our brand’s
+          success made it a satisfying and enjoyable experience.
+        </p>
+        <h2>Thomas S.</h2>
+        <h3>Chief Operating Officer</h3>
+      </div>
+
+      <div class="client-testimonial">
+        <img
+          class="mobile-image"
+          src="images/image-jennie.jpg"
+          alt="image of a person"
+        />
+        <p>
+          Incredible end result! Our sales increased over 400% when we worked
+          with Sunnyside. Highly recommended!
+        </p>
+        <h2>Jennie F.</h2>
+        <h3>Business Owner</h3>
+      </div>
+    </section>
+
+    <div class="image-collage">
+      <img
+        class="mobile-image"
+        src="images/mobile/image-gallery-milkbottles.jpg"
+        srcset="
+          images/mobile/image-gallery-milkbottles.jpg   720w,
+          images/desktop/image-gallery-milkbottles.jpg 1024w
+        "
+        sizes="(max-width: 1024px) 720w, 1024w"
+        alt="image of milkbottles"
+      />
+      <img
+        class="mobile-image"
+        src="images/mobile/image-gallery-orange.jpg"
+        srcset="
+          images/mobile/image-gallery-orange.jpg   720w,
+          images/desktop/image-gallery-orange.jpg 1024w
+        "
+        sizes="(max-width: 1024px) 720w, 1024w"
+        alt="image of an orange"
+      />
+      <img
+        class="mobile-image"
+        src="images/mobile/image-gallery-cone.jpg"
+        srcset="
+          images/mobile/image-gallery-cone.jpg   720w,
+          images/desktop/image-gallery-cone.jpg 1024w
+        "
+        sizes="(max-width: 1024px) 720w, 1024w"
+        alt="image of a cone"
+      />
+      <img
+        class="mobile-image"
+        src="images/mobile/image-gallery-sugar-cubes.jpg"
+        srcset="
+          images/mobile/image-gallery-sugar-cubes.jpg  720w,
+          images/desktop/image-gallery-sugarcubes.jpg 1024w
+        "
+        sizes="(max-width: 1024px) 720w, 1024w"
+        alt="image of sugar cubes"
+      />
+    </div>
+
+    <footer>
+      <div class="logo">
+        <img src="images/logo.svg" alt="logo" />
+      </div>
+      <div class="links">
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Projects</a>
+      </div>
+      <div class="socmed-links">
+        <img src="images/icon-facebook.svg" alt="facebook logo" />
+        <img src="images/icon-instagram.svg" alt="instagram logo" />
+        <img src="images/icon-twitter.svg" alt="twitter logo" />
+        <img src="images/icon-pinterest.svg" alt="pinterest logo" />
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
